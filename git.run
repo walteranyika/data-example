@@ -1,0 +1,5 @@
+mysqldump -u root -pNormal@2018 middle > middle-$(date +%d-%m-%Y).sql
+git add .
+curtime=`date`
+git commit -m "$(date +%F_%H-%M-%S) Automatic Backup @ $curtime"
+git push origin master
